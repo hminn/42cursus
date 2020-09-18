@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 17:15:12 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 17:43:19 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:44:45 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static char		*ft_gen(char *rtn, long nbr, int len, int isneg)
 		nbr = -nbr;
 	}
 	rtn[len] = '\0';
-	while(--len)
+	while (--len)
 	{
 		rtn[len] = (nbr % 10) + '0';
 		nbr /= 10;

@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 16:39:10 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 17:43:57 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:43:38 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int				ft_treat_pointer(unsigned long long ull, t_flags flags)
 	pointer = ft_ull_base(ull, 16);
 	pointer = ft_str_tolower(pointer);
 	if ((size_t)flags.dot < ft_strlen(pointer))
-		flags.dot =ft_strlen(pointer);
+		flags.dot = ft_strlen(pointer);
 	if (flags.minus == 1)
 		char_count += ft_in_put_part_pointer(pointer, flags);
 	char_count += ft_treat_width(flags.width, ft_strlen(pointer) + 2, 0);

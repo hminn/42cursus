@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 17:29:32 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 17:35:31 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:45:08 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char *rtn, int count)
 		if ((ull_save % base) < 10)
 			rtn[count - 1] = (ull_save % base) + 48;
 		else
-			rtn[count -1] = (ull_save % base) + 55;
+			rtn[count - 1] = (ull_save % base) + 55;
 		ull_save /= base;
 		count--;
 	}
