@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 03:18:31 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/19 03:56:41 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/19 03:59:54 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,11 @@ void		print_diuxp(va_list ap, t_info *info)
 	long long	data;
 
 	if (info->spec == 'd' || info->spec == 'i')
-		data = va_arg(ap, int)
+		data = va_arg(ap, int);
 	else if (info->spec == 'u' || info->spec == 'x' || info->spec == 'X')
 		data = va_arg(ap, unsigned int);
 	else
-		data = va_arg(ap, unsigned long)
+		data = va_arg(ap, unsigned long);
 	if (info->spec == 'd' || info->spec == 'i' || info->spec == 'u')
 		base = DEC;
 	else if (info->spec == 'X')
@@ -59,7 +59,7 @@ void		print_sc(va_list ap, t_info *info)
 	if (info->spec == 's')
 		data_s = va_arg(ap, char *);
 	else if (info->spec == 'c')
-		data_c = va_arg(ap, int)
+		data_c = va_arg(ap, int);
 	else
 		data_c = '%';
 	data_s = (data_s == NULL) ? "(null)" : data_s;
