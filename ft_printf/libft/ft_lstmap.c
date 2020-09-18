@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 13:11:55 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:47:44 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:51:02 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 
 	new_lst = NULL;
-	while(lst)
+	while (lst)
 	{
 		if (!(new = (t_list *)malloc(sizeof(t_list))))
 		{
