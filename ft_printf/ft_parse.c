@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 02:51:52 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/19 03:16:16 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/19 04:04:01 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void		parse_width(va_list ap, char **str, t_info *info)
 			info->width *= -1;
 			info->align = 1;
 		}
-		(*str++);
+		(*str)++;
 	}
 	while (**str >= '0' && **str <= '9')
 	{

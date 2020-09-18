@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 02:41:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/19 03:16:19 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/19 04:02:04 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void		control_center(va_list ap, char *str, t_info *info)
 {
 	while (*str)
 	{
-		if (*str == "%")
+		if (*str == '%')
 		{
 			++str;
 			parse_flags(&str, info);

@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 03:18:31 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/19 03:59:54 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/19 04:02:28 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_print.h"
+#include "ft_printf.h"
 
 void		print_hub(va_list ap, t_info *info)
 {
