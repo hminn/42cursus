@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 03:17:01 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/19 03:46:13 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/19 04:15:42 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void		print_space_diuxp(t_info *info, long long data)
 {
-	int		idx;
+	int			idx;
 
 	idx = data < 0 ? 1 : 0;
 	if (info->zero && !info->dot && !info->prec)
@@ -31,7 +31,7 @@ void		print_space_diuxp(t_info *info, long long data)
 
 void		print_zero_diuxp(t_info *info, long long data)
 {
-	int		idx;
+	int			idx;
 
 	if (info->zero && !info->dot && !info->prec)
 	{
@@ -49,7 +49,7 @@ void		print_zero_diuxp(t_info *info, long long data)
 
 void		print_space_sc(t_info *info)
 {
-	int				idx;
+	int			idx;
 
 	if (info->zero && !info->align && !info->dot && !info->prec)
 		return ;
@@ -64,7 +64,7 @@ void		print_space_sc(t_info *info)
 
 void		print_zero_sc(t_info *info)
 {
-	int				idx;
+	int			idx;
 
 	idx = 0;
 	if (info->zero && !info->align)

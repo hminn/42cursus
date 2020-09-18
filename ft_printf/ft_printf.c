@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/19 02:41:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/19 04:02:04 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/19 04:13:15 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void		init_info(t_info *info)
 {
 	info->align = 0;
 	info->zero = 0;
+	info->width = 0;
 	info->dot = 0;
 	info->prec = 0;
 	info->spec = 0;
@@ -36,14 +37,16 @@ void		control_center(va_list ap, char *str, t_info *info)
 			print_hub(ap, info);
 			init_info(info);
 		}
+		else
+			ft_putchar(*(str)++, info);
 	}
 }
 
 int			ft_printf(const char *str, ...)
 {
-	va_list	ap;
-	t_info	*info;
-	int		printed_len;
+	va_list		ap;
+	t_info		*info;
+	int			printed_len;
 
 	if (!(info = (t_info *)malloc(sizeof(t_info))))
 		return (-1);
