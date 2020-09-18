@@ -6,13 +6,13 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/09 13:08:08 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/03/09 15:41:07 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:47:29 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	while(lst->next != NULL)
 		lst = lst->next;

@@ -6,13 +6,13 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 00:14:26 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/03/02 13:18:52 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:48:39 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int		ft_memcmp(const void *src1,const void *src2, size_t size)
+int		ft_memcmp(const void *src1, const void *src2, size_t size)
 {
 	const unsigned char	*ptr1;
 	const unsigned char	*ptr2;
