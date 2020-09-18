@@ -5,93 +5,55 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/09/17 15:45:07 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:41:18 by hyeokim          ###   ########.fr       */
+/*   Created: 2020/09/19 02:41:25 by hyeokim           #+#    #+#             */
+/*   Updated: 2020/09/19 03:16:19 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/ft_printf.h"
+#include "ft_printf.h"
 
-t_flags			ft_init_flags(void)
+void		init_info(t_info *info)
 {
-	t_flags		flags;
-
-	flags.dot = -1;
-	flags.minus = 0;
-	flags.star = 0;
-	flags.type = 0;
-	flags.width = 0;
-	flags.zero = 0;
-	return (flags);
+	info->align = 0;
+	info->zero = 0;
+	info->dot = 0;
+	info->prec = 0;
+	info->spec = 0;
+	info->data_len = 0;
 }
 
-int				ft_flag_parse(const char *save, int i, t_flags *flags
-							, va_list args)
+void		control_center(va_list ap, char *str, t_info *info)
 {
-	while (save[i])
+	while (*str)
 	{
-		if (!ft_isdigit(save[i]) && !ft_is_in_type_list(save[i])
-		&& !ft_is_in_flags_list(save[i]))
-			break ;
-		if (save[i] == '0' && flags->width == 0 && flags->minus == 0)
-			flags->zero = 1;
-		if (save[i] == '.')
-			i = ft_flag_dot(save, i, flags, args);
-		if (save[i] == '-')
-			*flags = ft_flag_minus(*flags);
-		if (save[i] == '*')
-			*flags = ft_flag_width(args, *flags);
-		if (ft_isdigit(save[i]))
-			*flags = ft_flag_digit(save[i], *flags);
-		if (ft_is_in_type_list(save[i]))
+		if (*str == "%")
 		{
-			flags->type = save[i];
-			break ;
+			++str;
+			parse_flags(&str, info);
+			parse_width(ap, &str, info);
+			parse_precision(ap, &str, info);
+			parse_specifier(&str, info);
+			print_hub(ap, info);
+			init_info(info);
 		}
-		i++;
 	}
-	return (i);
 }
 
-int				ft_treat_save(const char *save, va_list args)
+int			ft_printf(const char *str, ...)
 {
-	int			i;
-	t_flags		flags;
-	int			char_count;
+	va_list	ap;
+	t_info	*info;
+	int		printed_len;
 
-	i = 0;
-	char_count = 0;
-	while (1)
-	{
-		flags = ft_init_flags();
-		if (!save[i])
-			break ;
-		else if (save[i] == '%' && save[i + 1])
-		{
-			i = ft_flag_parse(save, ++i, &flags, args);
-			if (ft_is_in_type_list(save[i]))
-				char_count += ft_treatment((char)flags.type, flags, args);
-			else if (save[i])
-				char_count += ft_putchar(save[i]);
-		}
-		else if (save[i] != '%')
-			char_count += ft_putchar(save[i]);
-		i++;
-	}
-	return (char_count);
-}
-
-int				ft_printf(const char *input, ...)
-{
-	const char	*save;
-	va_list		args;
-	int			char_count;
-
-	save = ft_strdup(input);
-	char_count = 0;
-	va_start(args, input);
-	char_count += ft_treat_save(save, args);
-	va_end(args);
-	free((char *)save);
-	return (char_count);
+	if (!(info = (t_info *)malloc(sizeof(t_info))))
+		return (-1);
+	init_info(info);
+	info->printed_len = 0;
+	va_start(ap, str);
+	control_center(ap, (char *)str, info);
+	printed_len = info->printed_len;
+	init_info(info);
+	free(info);
+	va_end(ap);
+	return (printed_len);
 }

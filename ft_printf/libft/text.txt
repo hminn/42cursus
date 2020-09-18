@@ -1,4 +1,0 @@
-c
-Hello World
-Hi My Name is
-123456
