@@ -1,9 +1,3 @@
-LIBFT = ./libft/libft.a
-
-N_TEMP = temp.a
-
-NAME = libftprintf.a
-
 SRCS =  ft_printf.c \
 		src/ft_treatment.c \
 		src/ft_treat_width.c \
@@ -19,44 +13,45 @@ SRCS =  ft_printf.c \
 		src/ft_treat_hexa.c \
 		src/ft_treat_flags.c
 
-SURPL_O = 	ft_treat_width.o \
-			ft_treatment.o \
-			ft_treat_width.o \
-			ft_u_itoa.o \
-			ft_ull_base.o \
-			ft_utils.o \
-			ft_treat_string.o \
-			ft_treat_char.o \
-			ft_treat_pointer.o \
-			ft_treat_int.o \
-			ft_treat_uint.o \
-			ft_treat_percent.o \
-			ft_treat_hexa.o \
-			ft_treat_flags.o
+LIBFT = libft
 
-CC = gcc
-
-FLAGS = -c -Wall -Wextra -Werror
+LIBFT_A = libft.a
 
 INCLUDES = ./includes
 
 OBJS = $(SRCS:.c=.o)
 
-$(NAME): $(OBJS)
-	$(MAKE) bonus -C ./libft
-	cp libft/libft.a $(NAME)
-	$(CC) $(FLAGS) $(INCLUDES) $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
+NAME = libftprintf.a
 
-all : $(NAME)
+ARRC = ar rc
+
+CC = gcc
+
+CFLAGS = -Wall -Wextra -Werror
+
+RM = rm -f
+
+.c.o:
+	${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I$(INCLUDES)
+
+$(NAME):	$(OBJS)
+		make all -C $(LIBFT)/
+		cp $(LIBFT)/$(LIBFT_A) $(NAME)
+		$(ARRC) $(NAME) $(OBJS)
+
+all :		$(NAME)
+
+bonus :		$(NAME)
+		ar rc $(NAME)
 
 clean :
-	$(MAKE) clean -C ./libft
-	rm -rf $(SURPL_O)
-	rm -rf $(OBJS)
+			$(RM) -f $(OBJS) $(OBJS_B)
+			make clean -C $(LIBFT)
 
-fclean : clean
-	$(MAKE) fclean -C ./libft
-	rm -rf $(NAME)
+fclean :	clean
+			$(RM) $(NAME) $(bonus)
+			make fclean -C $(LIBFT)
 
-re : fclean all
+re :		fclean all
+
+.PHONY : all bonus clean fclean re .c.o
