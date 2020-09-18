@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:35:27 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 20:04:45 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:39 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_putchar(int c)
 {
-	write(1, &c, 1);
+	write(1, &c, 1)
 	return (1);
 }
 
@@ -22,12 +22,9 @@ char	*ft_str_tolower(char *str)
 {
 	int i;
 
-	i = 0;
-	while (str[i])
-	{
+	i = -1;
+	while (str[++i])
 		str[i] = ft_tolower(str[i]);
-		i++;
-	}
 	return (str);
 }
 

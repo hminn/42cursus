@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:43:17 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:43:53 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:33 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	ft_in_put_part_uint(char *unsi_int, t_flags flags)
 {
-	int	char_count;
+	int char_count;
 
 	char_count = 0;
 	if (flags.dot >= 0)
@@ -51,7 +51,8 @@ int			ft_treat_uint(unsigned int unsi, t_flags flags)
 	int		char_count;
 
 	char_count = 0;
-	unsi = (unsigned int)(4294967295 + 1 + unsi);
+	unsi = (unsigned int)(4294967295 + 1
+				+ unsi);
 	if (flags.dot == 0 && unsi == 0)
 	{
 		char_count += ft_treat_width(flags.width, 0, 0);

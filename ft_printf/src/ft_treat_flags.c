@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:00:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 17:46:12 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:22 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_flags		ft_flag_width(va_list args, t_flags flags)
 }
 
 int			ft_flag_dot(const char *save, int start,
-						t_flags *flags, va_list args)
+			t_flags *flags, va_list args)
 {
 	int i;
 

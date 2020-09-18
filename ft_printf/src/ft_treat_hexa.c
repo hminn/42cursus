@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 16:29:55 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:43:08 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:26 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int		ft_in_put_part_hexa(char *hexa, t_flags flags)
 {
-	int	char_count;
+	int char_count;
 
 	char_count = 0;
 	if (flags.dot >= 0)
@@ -25,7 +25,7 @@ static int		ft_in_put_part_hexa(char *hexa, t_flags flags)
 
 static int		ft_put_part_hexa(char *hexa, t_flags flags)
 {
-	int	char_count;
+	int char_count;
 
 	char_count = 0;
 	if (flags.minus == 1)
@@ -52,7 +52,7 @@ int				ft_treat_hexa(unsigned int ui, int lower, t_flags flags)
 
 	char_count = 0;
 	ui = (unsigned int)(4294967295 + 1
-								+ ui);
+				+ ui);
 	if (flags.dot == 0 && ui == 0)
 	{
 		char_count += ft_treat_width(flags.width, 0, 0);

@@ -6,13 +6,13 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 16:39:10 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:43:38 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:30 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static int		ft_in_put_part_pointer(char *pointer, t_flags flags)
+static int	ft_in_put_part_pointer(char *pointer, t_flags flags)
 {
 	int char_count;
 
@@ -28,7 +28,7 @@ static int		ft_in_put_part_pointer(char *pointer, t_flags flags)
 	return (char_count);
 }
 
-int				ft_treat_pointer(unsigned long long ull, t_flags flags)
+int			ft_treat_pointer(unsigned long long ull, t_flags flags)
 {
 	char	*pointer;
 	int		char_count;

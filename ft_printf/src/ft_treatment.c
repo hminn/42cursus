@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 16:46:29 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:44:58 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:35 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ int		ft_treatment(int c, t_flags flags, va_list args)
 		char_count += ft_treat_hexa(va_arg(args, unsigned int), 1, flags);
 	else if (c == 'X')
 		char_count += ft_treat_hexa(va_arg(args, unsigned int), 0, flags);
-	else if (c == '&')
+	else if (c == '%')
 		char_count += ft_treat_percent(flags);
 	return (char_count);
 }

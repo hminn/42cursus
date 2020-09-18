@@ -6,13 +6,13 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/18 17:29:32 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 19:45:08 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 21:59:38 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-static char		*treat_base(unsigned long long ull_save, int base,
+static char	*treat_base(unsigned long long ull_save, int base,
 char *rtn, int count)
 {
 	while (ull_save != 0)
@@ -27,7 +27,7 @@ char *rtn, int count)
 	return (rtn);
 }
 
-char			*ft_ull_base(unsigned long long ull, int base)
+char		*ft_ull_base(unsigned long long ull, int base)
 {
 	char				*rtn;
 	unsigned long long	ull_save;
