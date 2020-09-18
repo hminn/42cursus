@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 15:45:07 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/18 17:39:50 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 19:41:18 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_flags			ft_init_flags(void)
 {
-	t_flags 	flags;
+	t_flags		flags;
 
 	flags.dot = -1;
 	flags.minus = 0;
@@ -25,7 +25,8 @@ t_flags			ft_init_flags(void)
 	return (flags);
 }
 
-int				ft_flag_parse(const char *save, int i, t_flags *flags, va_list args)
+int				ft_flag_parse(const char *save, int i, t_flags *flags
+							, va_list args)
 {
 	while (save[i])
 	{
@@ -45,7 +46,7 @@ int				ft_flag_parse(const char *save, int i, t_flags *flags, va_list args)
 		if (ft_is_in_type_list(save[i]))
 		{
 			flags->type = save[i];
-			break;
+			break ;
 		}
 		i++;
 	}
