@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 17:00:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/17 17:31:23 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 17:46:12 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int			ft_flag_dot(const char *save, int start,
 	i++;
 	if (save[i] == '*')
 	{
-		flags->dot = va_arg(args, int)
+		flags->dot = va_arg(args, int);
 		i++;
 	}
 	else

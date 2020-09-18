@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/17 15:45:07 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/09/17 16:58:40 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/09/18 17:39:50 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,12 @@ int				ft_flag_parse(const char *save, int i, t_flags *flags, va_list args)
 		if (save[i] == '-')
 			*flags = ft_flag_minus(*flags);
 		if (save[i] == '*')
-			*flags = ft_flag_width(args, *flags)
+			*flags = ft_flag_width(args, *flags);
 		if (ft_isdigit(save[i]))
 			*flags = ft_flag_digit(save[i], *flags);
 		if (ft_is_in_type_list(save[i]))
 		{
-			flags->type = save[i]
+			flags->type = save[i];
 			break;
 		}
 		i++;
@@ -52,7 +52,7 @@ int				ft_flag_parse(const char *save, int i, t_flags *flags, va_list args)
 	return (i);
 }
 
-int				treat_save(const char *save, va_list args)
+int				ft_treat_save(const char *save, va_list args)
 {
 	int			i;
 	t_flags		flags;
@@ -71,7 +71,7 @@ int				treat_save(const char *save, va_list args)
 			if (ft_is_in_type_list(save[i]))
 				char_count += ft_treatment((char)flags.type, flags, args);
 			else if (save[i])
-				char_count += ft_putchar(save[i])
+				char_count += ft_putchar(save[i]);
 		}
 		else if (save[i] != '%')
 			char_count += ft_putchar(save[i]);
