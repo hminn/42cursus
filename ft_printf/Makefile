@@ -5,19 +5,19 @@ N_TEMP = temp.a
 NAME = libftprintf.a
 
 SRCS =  ft_printf.c \
-		sources/ft_treatment.c \
-		sources/ft_treat_width.c \
-		sources/ft_u_itoa.c \
-		sources/ft_ull_base.c \
-		sources/ft_utils.c \
-		sources/ft_treat_string.c \
-		sources/ft_treat_char.c \
-		sources/ft_treat_pointer.c \
-		sources/ft_treat_int.c \
-		sources/ft_treat_uint.c \
-		sources/ft_treat_percent.c \
-		sources/ft_treat_hexa.c \
-		sources/ft_treat_flags.c
+		src/ft_treatment.c \
+		src/ft_treat_width.c \
+		src/ft_u_itoa.c \
+		src/ft_ull_base.c \
+		src/ft_utils.c \
+		src/ft_treat_string.c \
+		src/ft_treat_char.c \
+		src/ft_treat_pointer.c \
+		src/ft_treat_int.c \
+		src/ft_treat_uint.c \
+		src/ft_treat_percent.c \
+		src/ft_treat_hexa.c \
+		src/ft_treat_flags.c
 
 SURPL_O = 	ft_treat_width.o \
 			ft_treatment.o \
@@ -38,7 +38,7 @@ CC = gcc
 
 FLAGS = -c -Wall -Wextra -Werror
 
-INCLUDES = -I./includes
+INCLUDES = ./includes
 
 OBJS = $(SRCS:.c=.o)
 
