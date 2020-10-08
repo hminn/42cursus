@@ -14,7 +14,7 @@
 >
 > - **기존의 가상화 방식과의 차이점?**
 >
->   기존의 가상화 방식은 주로 **OS를 가상화**하였습니다.
+>    기존의 가상화 방식은 주로 **OS를 가상화**하였습니다.
 >
 >   우리에게 익숙한 [VMware](http://www.vmware.com/)나 [VirtualBox](https://www.virtualbox.org/)같은 가상머신은 호스트 OS위에 게스트 OS 전체를 가상화하여 사용하는 방식입니다. 이 방식은 여러가지 OS를 가상화(리눅스에서 윈도우를 돌린다던가) 할 수 있고 비교적 사용법이 간단하지만 무겁고 느려서 운영환경에선 사용할 수 없었습니다.
 >
@@ -182,3 +182,8 @@
 >   - 생성된 컨테이너를 실행할 명령어를 지정한다.
 >   - 도커 파일에 CMD가 두 개 이상 있는 경우 마지막 CMD만 유효하다.
 
+
+
+##### 출처
+
+- [https://velog.io/@hidaehyunlee/ftserver-%EC%84%A0%ED%96%89%EC%A7%80%EC%8B%9D-Docker-Debian-Buster-Nginx-](https://velog.io/@hidaehyunlee/ftserver-선행지식-Docker-Debian-Buster-Nginx-)
