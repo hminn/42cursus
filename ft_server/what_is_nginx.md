@@ -1,5 +1,17 @@
 ## What is Nginx?
 
+> ### 사전 지식
+>
+> - **웹 서버가 하는 일**
+>
+> 1. 커넥션을 맺는다 *(클라이언트의 접속을 받아들이거나, 원치 않는 클라이언트라면 닫는다)*
+> 2. 요청을 받는다 *(HTTP 요청 메세지를 네트워크로부터 읽어들인다)*
+> 3. 요청을 처리한다 *(요청 메세지를 해석하고 행동을 취한다)*
+> 4. 리소스에 접근한다 *(메세지에서 지정한 리소스에 접근한다)*
+> 5. 응답을 만든다 *(올바른 헤더를 포함한 HTTP 응답 메세지를 생성한다)*
+> 6. 응답을 보낸다 *(응답을 클라이언트에게 돌려준다)*
+> 7. 트랜잭션을 로그로 남긴다 *(로그파일에 트랜잭션 완료에 대한 기록을 남긴다)*
+
 
 
 > ### Nginx?
@@ -183,4 +195,5 @@
 **출처**
 
 - https://icarus8050.tistory.com/57
+- [https://velog.io/@hidaehyunlee/ftserver-%EC%84%A0%ED%96%89%EC%A7%80%EC%8B%9D-Docker-Debian-Buster-Nginx-](https://velog.io/@hidaehyunlee/ftserver-선행지식-Docker-Debian-Buster-Nginx-)
 - [https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9D%EC%8B%9C_%EC%84%9C%EB%B2%84](https://ko.wikipedia.org/wiki/프록시_서버)
