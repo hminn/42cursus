@@ -76,6 +76,12 @@
 
 
 
+### 0. Project Flow
+
+> 0. 맵 파싱 작업
+> 1. 레이캐스팅 작업
+> 2. Mlx 라이브러리를 이용한 그래픽 렌더링 작업
+
 ### 1. Analyze BaseLine Code 
 
 > **s_img**
@@ -100,3 +106,12 @@
 > - *Win : 그래픽 작업 내용을 렌더링 할 창(window)을 가리키는 포인터
 > - Key : key 입력 정보를 저장할 변수들
 > - Buf : 
+
+> 
+
+### 10. 추가 사항
+
+> - **Exit_Program** 의 Free 추가 **(refer_cub3D : exit_program 함수 참고)**
+>   : 에러 발생 시, 이전에 동적 할당한 모든 값들 Free 해주는 작업
+
+> - 
