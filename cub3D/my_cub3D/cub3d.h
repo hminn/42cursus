@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cub3d.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:18:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/03 15:17:29 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/09 18:28:10 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,7 +220,7 @@ typedef struct		s_config
 	int				color[2];
 	int				row;
 	int				col;
-	int				flag[2];
+	int				flag;
 	char			*texture[5];
 	char			*map_name;
 	char			**map;
@@ -233,7 +233,6 @@ typedef struct		s_info // s_game
 	void			*win;
 	double			move_speed; // speed_mov
 	double			rotate_speed; // speed_rot
-	// int	  		debug;
 	t_image			*img;
 	t_image			**tex;
 	t_image			*sprite;
