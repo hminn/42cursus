@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:18:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/09 18:28:10 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/10 01:53:26 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,6 @@
 # define ID_F 6
 # define ID_C 7
 # define ID_MAP 8
-
-/*
-** flag id list
-*/
-# define SAVE 0
-# define DEBUG 1
 
 /*
 ** mlx key
