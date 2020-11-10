@@ -6,15 +6,18 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 00:57:19 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/04/07 18:48:09 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/10 14:57:35 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#	ifndef LIBFT_H
-#	define LIBFT_H
-#	include <stddef.h>
-#	include <stdlib.h>
-#	include <unistd.h>
+#ifndef LIBFT_H
+# define LIBFT_H
+# include <stddef.h>
+# include <limits.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+# define BUFFER_SIZE 1
 
 typedef struct	s_list
 {
@@ -67,5 +70,9 @@ void			ft_lstclear(t_list **lst, void (*del)(void *));
 void			ft_lstiter(t_list *lst, void (*f)(void *));
 t_list			*ft_lstmap(t_list *lst, void *(*f)(void *),
 							void (*del)(void *));
+int				get_next_line(int fd, char **line);
+int				ft_isspace(int c);
+char			*ft_chrdel(char const *s, char c);
+int				ft_isspace_str(char *str);
 
 #	endif
