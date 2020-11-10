@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:18:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 01:53:26 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 01:26:05 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ typedef struct		s_coord_int
 /*
 // struct of mlx_img information
 */
-typedef struct		s_image // s_img
+typedef struct		s_img
 {
 	void			*img;
 	char			*data;
@@ -106,7 +106,7 @@ typedef struct		s_image // s_img
 	int				bpp;
 	int				width;
 	int				height;
-}					t_image;
+}					t_img;
 
 typedef struct		s_line
 {
@@ -182,8 +182,6 @@ typedef struct		s_key
 	int				back;
 	int				left;
 	int				right;
-	int				go_left;
-	int				go_right;
 	int				turn;
 	int				cam_up;
 	int				cam_down;

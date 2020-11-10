@@ -6,11 +6,33 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:12:52 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 01:56:48 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 00:32:09 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "cub3d.h"
+
+static int		main_loop(void *parameter)
+{
+	t_info *info;
+
+	info = (t_info *)parameter;
+	if (!(raycasting(info)))
+		exit(EXIT_FAILURE);
+	key_manager(info);
+	if (info->config.flag[1])
+		view_debug(info);
+	return (1);
+}
+
+static void		mlx_hub(t_info *info)
+{
+	mlx_hook(info->win, MLX_KEY_PRESS, 0, key_pressed, info);
+	mlx_hook(info->win, MLX_KEY_RELEASE, 0, key_released, info);
+	mlx_hook(info->win, MLX_KEY_EXIT, 0, exit_window, info);
+	mlx_loop_hook(info->mlx, &main_loop, info);
+	mlx_loop(info->mlx);
+}
 
 int		main(int argc, char *argv[])
 {
@@ -18,5 +40,8 @@ int		main(int argc, char *argv[])
 
 	if (!(info = (t_info *)malloc(sizeof(t_info))))
 		exit_program("Memory allocation failed");
-	parse_hub(argc, argv, game);
+	parse_hub(argc, argv, info);
+	init_hub(info);
+	mlx_hub(info);
+	return (EXIT_SUCCESS)
 }
