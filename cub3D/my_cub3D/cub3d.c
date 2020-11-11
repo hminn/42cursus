@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   cub3d.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:12:52 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 00:32:09 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 17:14:35 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ static int		main_loop(void *parameter)
 	if (!(raycasting(info)))
 		exit(EXIT_FAILURE);
 	key_manager(info);
-	if (info->config.flag[1])
-		view_debug(info);
 	return (1);
 }
 

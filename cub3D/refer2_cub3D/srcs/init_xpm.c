@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_xpm.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jwon <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/18 15:34:40 by jwon              #+#    #+#             */
-/*   Updated: 2020/08/04 14:19:36 by jwon             ###   ########.fr       */
+/*   Updated: 2020/11/11 16:47:50 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static void		set_sprite(char *path, t_game *game)
 
 void			convert_xpm_to_img(t_game *game)
 {
-	set_texture(game->config.texture[0], 0, game);
-	set_texture(game->config.texture[1], 1, game);
-	set_texture(game->config.texture[2], 2, game);
-	set_texture(game->config.texture[3], 3, game);
-	set_sprite(game->config.texture[4], game);
+	set_texture(game->config.texture[TEX_NO], TEX_NO, game);
+	set_texture(game->config.texture[TEX_SO], TEX_SO, game);
+	set_texture(game->config.texture[TEX_WE], TEX_WE, game);
+	set_texture(game->config.texture[TEX_EA], TEX_EA, game);
+	set_sprite(game->config.texture[TEX_S], game);
 }

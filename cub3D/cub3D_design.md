@@ -251,10 +251,12 @@
 > - **Exit_Program** 의 Free 추가 **(refer_cub3D : exit_program 함수 참고)**
 >   : 에러 발생 시, 이전에 동적 할당한 모든 값들 Free 해주는 작업
 
-> - 변수명
+> - 변수명 & 함수명 & 파일명 
 >
->   > - parse_using_gnl => parse_main
->   > - 
+>   > - main.c
+>   > - s_info
+>   >
+>   > - raycasting_a.c, raycasting_b.c
 
 > - 수정해야 할 부분들
 >

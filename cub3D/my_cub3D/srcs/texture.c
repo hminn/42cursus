@@ -5,25 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/16 15:27:27 by jwon              #+#    #+#             */
-/*   Updated: 2020/11/11 16:51:35 by hyeokim          ###   ########.fr       */
+/*   Created: 2020/11/02 22:09:23 by hyeokim           #+#    #+#             */
+/*   Updated: 2020/11/11 16:53:01 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/cub3d.h"
+#include "cub3d.h"
 
-static void	determine_side_draw(t_ray *r, t_game *g, t_line *l, double wall_x)
+static void	determine_side_draw(t_ray *r, t_info *g, t_line *l, double wall_x)
 {
 	t_img	*img;
 	int		tex_x;
 
-	img = g->tex[2];
+	img = g->tex[TEX_WE];
 	if (r->side == 1)
-		img = g->tex[3];
+		img = g->tex[TEX_EA];
 	if (r->side == 2)
-		img = g->tex[1];
+		img = g->tex[TEX_SO];
 	if (r->side == 3)
-		img = g->tex[0];
+		img = g->tex[TEX_NO];
 	tex_x = (int)(wall_x * (double)img->width);
 	if ((r->side == 0 || r->side == 1) && r->ray_dir.x > 0)
 		tex_x = img->width - tex_x - 1;
@@ -35,7 +35,7 @@ static void	determine_side_draw(t_ray *r, t_game *g, t_line *l, double wall_x)
 	ver_line_texture_image(l, g, img, r);
 }
 
-void		texturisation(t_ray *ray, t_game *game)
+void		texturisation(t_ray *ray, t_info *info)
 {
 	t_img	*img;
 	t_line	*line;
@@ -46,19 +46,19 @@ void		texturisation(t_ray *ray, t_game *game)
 	ft_bzero(line, sizeof(t_line));
 	line->x = ray->pix;
 	if (ray->side == 0 || ray->side == 1)
-		wall_x = game->config.player.pos.y
+		wall_x = info->config.player.pos.y
 				+ ray->perp_wall_dist * ray->ray_dir.y;
 	else
-		wall_x = game->config.player.pos.x
+		wall_x = info->config.player.pos.x
 				+ ray->perp_wall_dist * ray->ray_dir.x;
 	wall_x -= floor(wall_x);
-	if (game->config.map[ray->map.y][ray->map.x] == '1')
-		determine_side_draw(ray, game, line, wall_x);
+	if (info->config.map[ray->map.y][ray->map.x] == '1')
+		determine_side_draw(ray, info, line, wall_x);
 	line->y0 = 0;
 	line->y1 = ray->draw_start;
-	ver_line_color_image(line, game, game->config.color[COLOR_C]);
-	line->y0 = game->config.res[Y];
+	ver_line_color_image(line, info, info->config.color[COLOR_C]);
+	line->y0 = info->config.res[Y];
 	line->y1 = ray->draw_end;
-	ver_line_color_image(line, game, game->config.color[COLOR_F]);
+	ver_line_color_image(line, info, info->config.color[COLOR_F]);
 	free(line);
 }

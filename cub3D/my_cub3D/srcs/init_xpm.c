@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:23:42 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 00:57:39 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 16:53:47 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ static void		set_sprite(char *path, t_info *info)
 
 void			convert_xpm_to_img(t_info *info)
 {
-	set_texture(info->config.texture[0], 0, info);
-	set_texture(info->config.texture[1], 1, info);
-	set_texture(info->config.texture[2], 2, info);
-	set_texture(info->config.texture[3], 3, info);
-	set_sprite(info->config.texture[4], info);
+	set_texture(info->config.texture[TEX_NO], TEX_NO, info);
+	set_texture(info->config.texture[TEX_SO], TEX_SO, info);
+	set_texture(info->config.texture[TEX_WE], TEX_WE, info);
+	set_texture(info->config.texture[TEX_EA], TEX_EA, info);
+	set_sprite(info->config.texture[TEX_S], info);
 }

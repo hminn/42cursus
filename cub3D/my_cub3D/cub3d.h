@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/30 11:18:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 01:26:05 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 17:28:49 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,22 +62,14 @@
 # define MLX_KEY_RELEASE 3
 # define MLX_KEY_EXIT 17
 # define KEY_ESC 53
-# define KEY_R	15
 # define KEY_W	13
 # define KEY_S	1
 # define KEY_A	0
 # define KEY_D	2
-# define KEY_F 	3
-# define KEY_Q	12
-# define KEY_E	14
 # define KEY_UP 126
 # define KEY_DOWN 125
 # define KEY_LEFT 123
 # define KEY_RIGHT 124
-# define KEY_SPACE 49
-# define KEY_TAB 48
-# define KEY_MINUS 27
-# define KEY_PLUS 24
 
 /*
 ** struct of coordinate
@@ -219,12 +211,12 @@ typedef struct		s_config
 	t_player		player;
 }					t_config;
 
-typedef struct		s_info // s_game
+typedef struct		s_info
 {
 	void			*mlx;
 	void			*win;
-	double			move_speed; // speed_mov
-	double			rotate_speed; // speed_rot
+	double			speed_mov;
+	double			speed_rot;
 	t_image			*img;
 	t_image			**tex;
 	t_image			*sprite;
@@ -232,5 +224,91 @@ typedef struct		s_info // s_game
 	t_key			*key;
 	t_config		config;
 }					t_info;
+
+/*
+** exit
+*/
+void				exit_program(char *str);
+
+/*
+** parse
+*/
+void				parse_hub(int argc, char *argv[], t_info *info);
+void				parse_resolution(char *line, t_config *config);
+void				parse_texture(char *line, int id, t_config *config);
+int					check_texture_id(char *line, t_config *config);
+void				parse_color(char *line, int id, t_config *config);
+int					check_color_id(char *line, t_config *config);
+void				parse_map(int ret, char *line, t_config *config);
+void				save_player_info(int row, int col, t_config *config);
+
+/*
+** parse utils
+*/
+int					check_filename_ext(char *filename, char *ext);
+void				check_identifiers_exist(int ret, t_config *config);
+int					check_valid_chr(char c);
+
+/*
+** init
+*/
+void				init_hub(t_info *info);
+void				convert_xpm_to_img(t_info *info);
+void				view_debug(t_info *info);
+
+/*
+** config key & window
+*/
+int					key_manager(t_info *info);
+int					key_released(int key, void *parameter);
+int					key_pressed(int key, void *parameter);
+int					exit_window(void *parameter);
+
+/*
+** control camera & player
+*/
+void				move_go(t_info *info);
+void				move_back(t_info *info);
+void				move_left(t_info *info);
+void				move_right(t_info *info);
+void				camera_up(t_info *info);
+void				camera_down(t_info *info);
+void				rotate_left(t_info *info);
+void				rotate_right(t_info *info);
+
+/*
+** raycasting
+*/
+int					raycasting(t_info *info);
+void				perp_and_height(t_ray *ray, t_player *player, t_info *info);
+void				hit(t_ray *ray, t_info *info);
+
+/*
+** sprite
+*/
+int					draw_sprite(t_ray *ray, t_info *info);
+void				is_sprite(t_ray *ray, t_info *info);
+void				sort_sprite(t_info *info,
+								t_sprite *sprites, int nbr_sprites);
+t_sprite			*list_to_tab(t_info *info);
+
+/*
+** texture
+*/
+void				texturisation(t_ray *ray, t_info *info);
+
+/*
+** image
+*/
+void				pixel_put_to_image(int color, int x, int y, t_img *img);
+void				ver_line_color_image(t_line *line, t_info *info, int color);
+void				ver_line_texture_image(t_line *line, t_info *info,
+											t_img *tex, t_ray *ray);
+t_img				*new_image(t_info *info, int x_len, int y_len);
+
+/*
+** srceenshot
+*/
+void				create_screenshot(t_img *mlx_img, char *name);
 
 #endif
