@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   raycasting_b.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 23:30:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 02:27:53 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:28:44 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void		perp_and_height(t_ray *ray, t_player *player, t_info *info)
 {

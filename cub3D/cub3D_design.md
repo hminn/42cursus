@@ -246,10 +246,6 @@
 > - *Win : 그래픽 작업 내용을 렌더링 할 창(window)을 가리키는 포인터
 > - Key : key 입력 정보를 저장할 변수들
 
-
-
-
-
 ### Inf0. 추가 사항
 
 > - **Exit_Program** 의 Free 추가 **(refer_cub3D : exit_program 함수 참고)**

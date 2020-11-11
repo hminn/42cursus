@@ -1,5 +1,13 @@
 NAME 		=	cub3D
 
+LIBFT = ./Libft/libft.a
+
+CC = gcc
+INCS = -I./ -I./Libft -I./mlx
+INCLIB = -Lmlx -lmlx -framework OpenGL -framework Appkit -Llibft -lft
+CFLAGS = -Wall -Werror -Wextra
+LIBFT = ./libft
+
 SRCS 		=	cub3d.c \
 				srcs/exit.c \
 				srcs/parse_hub.c \
@@ -23,27 +31,21 @@ SRCS 		=	cub3d.c \
 
 OBJS		=	${SRCS:%.c=%.o}
 
-FLAGS		=	-Wall -Wextra -Werror
+all: $(NAME)
 
-LEAKS		=	-g3 -fsanitize=address -fsanitize=undefined -std=c99
+$(NAME): $(OBJS)
+	$(MAKE) -C $(LIBFT)
+	$(MAKE) -C ./mlx
+	$(CC) $(CFLAGS) $(INCS) -o $(NAME) $(OBJS) $(INCLIB)
 
-MLX			=	-Llibs/minilibx -lmlx -framework OpenGL -framework AppKit
-
-$(NAME) : $(OBJS)
-	@$(MAKE) re -C ./Libft
-	@$(MAKE) re -C ./mlx
-	@gcc $(FLAGS) $(OBJS) -I $(MLX) ./Libft/libft.a -o $(NAME)
-
-all : $(NAME)
-
-clean :
-	$(MAKE) clean -C ./Libft
+clean:
+	$(MAKE) -C $(LIBFT) clean
 	$(MAKE) clean -C ./mlx
 	rm -rf $(OBJS)
 
-fclean :
+fclean: clean
+	$(MAKE) -C $(LIBFT) fclean
 	rm -rf $(NAME)
-	$(MAKE) -C ./Libft fclean
 	rm -rf screenshot.bmp
 
-re : fclean	all
+re: fclean all

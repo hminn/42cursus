@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   screenshot.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/11 17:10:21 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 17:10:51 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:28:48 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static int	data_to_bmp(t_img *mlx_img, int fd)
 {

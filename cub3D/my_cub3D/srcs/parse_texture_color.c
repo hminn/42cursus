@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_texture_color.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 21:50:54 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 23:43:03 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 22:12:27 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 int				check_texture_id(char *line, t_config *config)
 {
@@ -110,9 +110,9 @@ void			parse_color(char *line, int id, t_config *config)
 	while (++idx < 3)
 		free(buf[idx]);
 	free(buf);
-	if (!(0 <= color[0] && color[0] <=255) ||
-		!(0 <= color[0] && color[0] <=255) ||
-		!(0 <= color[0] && color[0] <=255))
+	if (!(0 <= color[0] && color[0] <= 255) ||
+		!(0 <= color[0] && color[0] <= 255) ||
+		!(0 <= color[0] && color[0] <= 255))
 		exit_program("RGB value is out of expected range");
 	config->color[id] = (color[0] * 256 * 256) + (color[1] * 256) + color[2];
 }

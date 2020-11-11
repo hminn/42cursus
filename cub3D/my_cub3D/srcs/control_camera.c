@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   control_camera.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 14:16:33 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 17:21:12 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:27:02 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void			rotate_left(t_info *info)
 {
