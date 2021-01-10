@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/06 00:58:08 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 17:35:45 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:44:41 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ int				preprocess_input(char **line)
 	return (1);
 }
 
-void			print_front(char *tmp, char *set, char *pwd, char*user)
+void			print_front(char *tmp, char *set, char *pwd, char *user)
 {
 	ft_putstr_fd(user, 1);
 	ft_putstr_fd(" \033[44m\033[30m ", 1);
@@ -99,20 +99,3 @@ void			print_prompt(char *user)
 	free(tmp[0]);
 	free(pwd);
 }
-
-// void			print_header(void)
-// {
-// 	int		fd;
-// 	char	*line;
-
-// 	fd = open("ascii_art", O_RDONLY);
-// 	while (get_next_line(fd, &line))
-// 	{
-// 		ft_putstr_fd("\033[36m", 1);
-// 		ft_putendl_fd(line, STDOUT_FILENO);
-// 		free(line);
-// 	}
-// 	close(fd);
-// 	free(line);
-// 	ft_putendl_fd("\033[0m", 1);
-// }

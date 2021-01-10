@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 18:32:07 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 17:28:59 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:43:34 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void		save_envp(int argc, char **argv, char **envp, t_list **envs)
 	g_env_user = get_value("USER", *envs);
 }
 
-int		main(int argc, char **argv, char **envp)
+int			main(int argc, char **argv, char **envp)
 {
 	t_list	*envs;
 	char	*line;

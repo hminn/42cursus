@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 16:19:26 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 17:27:02 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:43:02 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ char		*get_value(char *key, t_list *envs)
 	{
 		env_key = ((t_env *)envs->content)->key;
 		if (!(ft_strncmp(env_key, key, ft_strlen(key))))
-			return(((t_env *)envs->content)->value);
+			return (((t_env *)envs->content)->value);
 		envs = envs->next;
 	}
 	return ("");

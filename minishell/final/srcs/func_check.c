@@ -6,15 +6,15 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 15:32:17 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 17:40:00 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:42:02 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-int		check_quote(char *str)
+int			check_quote(char *str)
 {
-	int	i;
+	int		i;
 
 	i = -1;
 	while (str[++i])
@@ -25,9 +25,9 @@ int		check_quote(char *str)
 	return (0);
 }
 
-int		check_env(char *str)
+int			check_env(char *str)
 {
-	int	i;
+	int		i;
 
 	i = -1;
 	while (str[++i])
@@ -38,9 +38,9 @@ int		check_env(char *str)
 	return (0);
 }
 
-int		check_pipe(char *str)
+int			check_pipe(char *str)
 {
-	int	num;
+	int		num;
 
 	num = 0;
 	while (*str)

@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/07 14:28:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 16:21:24 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:45:47 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ void	check_path(char *argv, char *path)
 			ft_putendl_fd(strerror(errno), 2);
 	}
 	else
+	{
 		if (chdir(argv) == -1)
 			ft_putendl_fd(strerror(errno), 2);
+	}
 }
 
 void	run_cd(char **argv, t_list *envs)
@@ -29,7 +31,7 @@ void	run_cd(char **argv, t_list *envs)
 	char	*path;
 
 	path = 0;
-	if (argv[1] == NULL ||!ft_strncmp(argv[1], "~", ft_strlen(argv[1])))
+	if (argv[1] == NULL || !ft_strncmp(argv[1], "~", ft_strlen(argv[1])))
 	{
 		path = get_value("HOME", envs);
 	}

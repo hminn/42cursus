@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 16:13:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 16:14:01 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:42:38 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_puterror_fd(char *s1, char *s2, int fd)
 
 void	free_double_arr(char **arr)
 {
-	int		idx;
+	int	idx;
 
 	if (!arr)
 		return ;
@@ -31,7 +31,7 @@ void	free_double_arr(char **arr)
 	free(arr);
 }
 
-void free_pipe(t_pipe *p)
+void	free_pipe(t_pipe *p)
 {
 	free_double_arr(p->argv);
 	free(p->line);

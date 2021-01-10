@@ -6,13 +6,13 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 16:06:26 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 18:10:41 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:43:56 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-char		*preprocess_line(char *line, int start, int num, char *charset)
+char			*preprocess_line(char *line, int start, int num, char *charset)
 {
 	char	*sub_result;
 	char	*result;
