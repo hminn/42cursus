@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   config_key.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 23:22:10 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 17:18:02 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:31:09 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 int		key_released(int key, void *parameter)
 {

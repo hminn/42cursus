@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_resolution.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 15:32:37 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 01:56:42 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:28:29 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void		check_resolution_format(char *line)
 {

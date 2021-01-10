@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_hub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 12:14:30 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 01:56:31 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:28:14 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void		init_config(t_config *config)
 {
@@ -97,7 +97,7 @@ void			parse_hub(int argc, char *argv[], t_info *info)
 	check_arguments(argc, argv, &info->config);
 	if ((fd = open(argv[1], O_RDONLY)) == -1)
 		exit_program("No such file(.cub) or directory");
-	game->config.map_name = ft_strdup(argv[1]);
+	info->config.map_name = ft_strdup(argv[1]);
 	ret = parse_using_gnl(fd, ret, line, &info->config);
 	close(fd);
 	check_identifiers_exist(ret, &info->config);

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   raycasting_a.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 21:13:27 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 01:29:40 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:37:26 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void		next_step(t_ray *ray, t_player *player)
 {
@@ -77,7 +77,7 @@ int				raycasting(t_info *info)
 		do_raycasting(ray, info);
 	if (!draw_sprite(ray, info))
 		return (-1);
-	if (info->config.flag[SAVE])
+	if (info->config.flag)
 		create_screenshot(info->img, "screenshot");
 	mlx_put_image_to_window(info->mlx, info->win, info->img->img, 0, 0);
 	free(ray->z_buffer);

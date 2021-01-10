@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   init_xpm.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 15:23:42 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 16:53:47 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:27:30 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void		set_texture(char *path, int idx, t_info *info)
 {

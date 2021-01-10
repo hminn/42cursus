@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_map_player.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 11:33:11 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 17:16:23 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:28:21 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void		set_dir(double x, double y, t_config *config)
 {

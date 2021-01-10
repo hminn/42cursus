@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   parse_utils.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/31 17:52:14 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 02:10:38 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:28:36 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 int		check_filename_ext(char *filename, char *ext)
 {

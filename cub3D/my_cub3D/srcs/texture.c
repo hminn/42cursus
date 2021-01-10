@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   texture.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 22:09:23 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 16:53:01 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 22:29:11 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
-static void	determine_side_draw(t_ray *r, t_info *g, t_line *l, double wall_x)
+static void	determine_side_draw(t_ray *r, t_info *i, t_line *l, double wall_x)
 {
 	t_img	*img;
 	int		tex_x;
 
-	img = g->tex[TEX_WE];
+	img = i->tex[TEX_EA];
 	if (r->side == 1)
-		img = g->tex[TEX_EA];
+		img = i->tex[TEX_WE];
 	if (r->side == 2)
-		img = g->tex[TEX_SO];
+		img = i->tex[TEX_SO];
 	if (r->side == 3)
-		img = g->tex[TEX_NO];
+		img = i->tex[TEX_NO];
 	tex_x = (int)(wall_x * (double)img->width);
 	if ((r->side == 0 || r->side == 1) && r->ray_dir.x > 0)
 		tex_x = img->width - tex_x - 1;
@@ -32,12 +32,11 @@ static void	determine_side_draw(t_ray *r, t_info *g, t_line *l, double wall_x)
 	l->y0 = r->draw_end;
 	l->y1 = r->draw_start;
 	l->tex_x = tex_x;
-	ver_line_texture_image(l, g, img, r);
+	ver_line_texture_image(l, i, img, r);
 }
 
 void		texturisation(t_ray *ray, t_info *info)
 {
-	t_img	*img;
 	t_line	*line;
 	double	wall_x;
 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   image.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 15:12:23 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 17:07:00 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 20:44:44 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void		pixel_put_to_image(int color, int x, int y, t_img *img)
 {
@@ -74,7 +74,7 @@ static void	texture_on_img(t_line *line, t_img *tex, t_info *info, t_ray *ray)
 					+ 2];
 }
 
-void		ver_line_texture_image(t_line *l, t_info *g, t_img *t, t_ray *r)
+void		ver_line_texture_image(t_line *l, t_info *i, t_img *t, t_ray *r)
 {
 	int y_max;
 
@@ -92,7 +92,7 @@ void		ver_line_texture_image(t_line *l, t_info *g, t_img *t, t_ray *r)
 	{
 		while (l->y < y_max)
 		{
-			texture_on_img(l, t, g, r);
+			texture_on_img(l, t, i, r);
 			l->y++;
 		}
 	}

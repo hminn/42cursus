@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   init_hub.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:22:42 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 00:34:25 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:33:06 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void		init_game_speed(t_info *info)
 {
-	info->debug = 0;
 	info->speed_mov = 0.1;
 	info->speed_rot = 0.1;
 }
@@ -28,15 +27,11 @@ static void		init_game_key(t_info *info)
 	info->key->back = 0;
 	info->key->left = 0;
 	info->key->right = 0;
-	info->key->go_left = 0;
-	info->key->go_right = 0;
 	info->key->turn = 0;
 	info->key->cam_up = 0;
 	info->key->cam_down = 0;
 	info->key->rotate_left = 0;
 	info->key->rotate_right = 0;
-	info->key->speed_down = 0;
-	info->key->speed_up = 0;
 }
 
 static void		init_game_textures(t_info *info, int cnt)

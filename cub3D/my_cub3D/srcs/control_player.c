@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   control_player.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 18:23:27 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 17:21:24 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 22:11:58 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 void		move_go(t_info *info)
 {

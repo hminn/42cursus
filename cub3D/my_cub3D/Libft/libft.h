@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 00:57:19 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/10 14:57:35 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 22:11:09 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,4 +75,4 @@ int				ft_isspace(int c);
 char			*ft_chrdel(char const *s, char c);
 int				ft_isspace_str(char *str);
 
-#	endif
+#endif

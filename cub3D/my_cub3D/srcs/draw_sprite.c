@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   draw_sprite.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/04 03:21:55 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/11/11 17:09:16 by hyeokim          ###   ########.fr       */
+/*   Updated: 2020/11/11 19:27:13 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "cub3d.h"
+#include "../cub3d.h"
 
 static void			calcul_values(t_draw_sprite *ds, t_info *info)
 {
