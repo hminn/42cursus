@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 17:31:24 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 21:48:05 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 23:00:51 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char			**get_argv(char *line, t_list *envs);
 */
 int				ft_puterror_fd(char *s1, char *s2, int fd);
 void			free_double_arr(char **arr);
-void 			free_pipe(t_pipe *p);
+void			free_pipe(t_pipe *p);
 
 /*
 **	utils_env.c
