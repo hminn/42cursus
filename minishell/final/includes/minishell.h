@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/10 17:31:24 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 18:09:21 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 21:48:05 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,6 @@ void			handle_signal(int signo);
 int				preprocess_input(char **line);
 void			print_front(char *tmp, char *set, char *pwd, char*user);
 void			print_prompt(char *user);
-// void			print_header(void);
 
 /*
 **	parse_line.c
@@ -101,6 +100,7 @@ char			**get_argv(char *line, t_list *envs);
 int				ft_puterror_fd(char *s1, char *s2, int fd);
 void			free_double_arr(char **arr);
 void 			free_pipe(t_pipe *p);
+
 /*
 **	utils_env.c
 */
