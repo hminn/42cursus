@@ -6,76 +6,50 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 13:03:59 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/04/06 15:29:17 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 22:25:08 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_is_in_set(char c, char const *set)
+int		ft_checkset(char c, char const *set)
 {
-	while (*set)
-		if (c == *set++)
-			return (1);
-	return (0);
-}
+	unsigned int	i;
 
-int		ft_back_check(char const *s, char const *set)
-{
-	while (*s)
-		if (!(ft_is_in_set(*s++, set)))
-			return (1);
-	return (0);
-}
-
-int		ft_alloc_len(char const *s, char const *set)
-{
-	int		idx;
-	int		len;
-
-	len = 0;
-	idx = 0;
-	while (*(s + idx))
+	i = 0;
+	while (set[i])
 	{
-		if (!(ft_is_in_set(*(s + idx), set)))
-			len++;
-		else
-		{
-			if (ft_back_check(s + idx, set) && len != 0)
-				len++;
-		}
-		idx++;
+		if (set[i] == c)
+			return (1);
+		i++;
 	}
-	return (len);
-}
-
-void	ft_fill_new(char *new, char const *s, char const *set)
-{
-	int		idx;
-
-	idx = 0;
-	while (*s)
-	{
-		if (!(ft_is_in_set(*s, set)))
-			new[idx++] = *s;
-		else
-		{
-			if (ft_back_check(s, set) && idx != 0)
-				new[idx++] = *s;
-		}
-		s++;
-	}
-	new[idx] = 0;
+	return (0);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new;
-	int		alloc_len;
+	char			*str;
+	unsigned int	start;
+	unsigned int	end;
+	unsigned int	i;
 
-	alloc_len = ft_alloc_len(s1, set) + 1;
-	if (!(new = (char *)malloc(alloc_len * sizeof(char))))
-		return (NULL);
-	ft_fill_new(new, s1, set);
-	return (new);
+	if (s1 == 0 || set == 0)
+		return (0);
+	start = 0;
+	i = 0;
+	while (s1[start] && ft_checkset(s1[start], set))
+		start++;
+	end = ft_strlen(s1);
+	while (end > start && ft_checkset(s1[end - 1], set))
+		end--;
+	if (!(str = (char *)malloc(sizeof(char) * (end - start + 1))))
+		return (0);
+	while (start < end)
+	{
+		str[i] = s1[start];
+		i++;
+		start++;
+	}
+	str[i] = 0;
+	return (str);
 }
