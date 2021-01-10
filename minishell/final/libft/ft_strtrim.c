@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/04 13:03:59 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/01/10 22:25:08 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/01/10 22:43:49 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		end--;
 	if (!(str = (char *)malloc(sizeof(char) * (end - start + 1))))
 		return (0);
-	while (start < end)
+	while (start <= end )
 	{
 		str[i] = s1[start];
 		i++;
