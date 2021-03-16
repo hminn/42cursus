@@ -1,0 +1,114 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-config
+data:
+  custom.ini: |
+    [server]
+    root_url = %(protocol)s://%(domain)s/
+    [auth.proxy]
+    enabled = false
+    header_name = X-WEBAUTH-USER
+    header_property = username
+    auto_sign_up = true
+    sync_ttl = 60
+    whitelist =
+    headers =
+    enable_login_token = false
+  datasources.yml: |
+    apiVersion: 1
+    datasources:
+    - name: InfluxDB
+      type: influxdb
+      access: proxy
+      database: telegraf
+      isDefault: true
+      user: admin
+      password: admin
+      url: http://influxdb:8086
+  dashboards.yml: |
+    apiVersion: 1
+    providers:
+    - name: 'influxdb'
+      orgId: 1
+      folder: ''
+      folderUid: ''
+      type: file
+      disableDeletion: false
+      editable: true
+      updateIntervalSeconds: 5
+      allowUiUpdates: true
+      options:
+        path: /usr/share/grafana/public/dashboards
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: grafana
+  annotations:
+    metallb.universe.tf/allow-shared-ip: "shared"
+  labels:
+    app: grafana
+spec:
+  type: LoadBalancer
+  loadBalancerIP: 192.168.49.2
+  selector:
+    app: grafana
+  ports:
+  - name: grafana
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: grafana
+  labels:
+    app: grafana
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: grafana
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: grafana
+    spec:
+      containers:
+      - image: hyeokim_grafana
+        imagePullPolicy: Never
+        name: grafana
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - name: grafana-config
+          mountPath: /usr/share/grafana/conf/custom.ini
+          subPath: custom.ini
+        - name: grafana-provisioning
+          mountPath: /usr/share/grafana/conf/provisioning
+      volumes:
+      - name: grafana-config
+        configMap:
+          name: grafana-config
+          items:
+          - key: custom.ini
+            path: custom.ini
+      - name: grafana-provisioning
+        configMap:
+          name: grafana-config
+          items:
+          - key: datasources.yml
+            path: datasources/datasources.yml
+          - key: dashboards.yml
+            path: dashboards/dashboards.yml
