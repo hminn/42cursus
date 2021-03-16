@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+spec:
+  selector:
+    matchLabels:
+      service: db
+      # app: result
+  template:
+    metadata:
+      labels:
+        service: db
+        # app: result
+    spec:
+      containers:
+        - image: postgres:9.4
+          name: db
+          env:
+            - name: POSTGRES_USER
+              value: "postgres"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+          ports:
+            - containerPort: 5432
+              protocol: TCP
+
+--- 
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+spec:
+  ports:
+    - port: 5432
+      protocol: TCP
+  selector:
+    service: db
+    # app: result
