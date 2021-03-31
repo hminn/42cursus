@@ -1,0 +1,41 @@
+NAME = ../../checker
+
+SRCS =	./main.c \
+		../public/stack.c \
+		../public/stack2.c \
+		../public/instructions.c \
+		../public/instructions2.c \
+		../public/utils.c \
+		../public/quick_sort.c
+
+OBJS	=	$(SRCS:%.c=%.o)
+
+LIBS	=	-L../../libft -lft
+
+LIBFT	=	libft.a
+
+HEADER	=	-I ../../includes
+
+CC		=	gcc
+
+RM		=	rm -rf
+
+all		: $(NAME)
+
+$(NAME)	: $(LIBFT)
+	$(CC) $(SRCS) $(LIBS) $(HEADER) -o $(NAME)
+
+$(LIBFT):
+	$(MAKE) -C ../../libft
+
+clean	:
+	$(MAKE) -C ../../libft clean
+	rm -rf $(OBJS)
+
+fclean	:
+	$(MAKE) -C ../../libft fclean
+	rm -rf $(NAME)
+
+re		: fclean all
+
+.PHONY: all clean fclean re

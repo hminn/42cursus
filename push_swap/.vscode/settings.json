@@ -1,0 +1,7 @@
+{
+	"files.associations": {
+		"*.json": "jsonc",
+		"sort.h": "c",
+		"push_swap.h": "c"
+	}
+}
