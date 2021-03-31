@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/03/01 00:57:19 by hyeokim           #+#    #+#             */
-/*   Updated: 2020/04/07 18:48:09 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/03/31 15:24:55 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 #	include <stddef.h>
 #	include <stdlib.h>
 #	include <unistd.h>
-# define FD_SIZE 255
-# define BUFFER_SIZE 1
+# 	define FD_SIZE 255
+# 	define BUFFER_SIZE 1
 
 typedef struct	s_list
 {

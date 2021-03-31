@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/23 16:05:17 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/30 16:22:26 by hyeokim          ###   ########.fr       */
+/*   Created: 2021/03/31 15:20:24 by hyeokim           #+#    #+#             */
+/*   Updated: 2021/03/31 15:22:58 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strcpy(char *dst, const char *src)
+char	*ft_strcpy(char *dst, const char *src)
 {
-    size_t i;
+	size_t	i;
 
-    i = 0;
-    while (src[i])
-    {
-        dst[i] = src[i];
-        i++;
-    }
-    dst[i] = 0;
-    return (dst);
+	i = 0;
+	while (src[i])
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = 0;
+	return (dst);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   instructions.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 19:07:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/31 01:28:35 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/03/31 15:27:20 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ void	exec_p(t_stack *dst_stack, t_stack *src_stack, int *cnt, const char c)
 	if (src_stack->size > 0)
 		push(dst_stack, pop(src_stack));
 	(*cnt)++;
-
 	output_cmd[0] = 'p';
 	output_cmd[1] = c;
 	output_cmd[2] = '\0';

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 15:15:12 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/30 17:03:28 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/03/31 15:26:52 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ t_node	*create_node(int new_value)
 	return (new_node);
 }
 
-void	delete_node (t_node *remove_node)
+void	delete_node(t_node *remove_node)
 {
 	free(remove_node);
 }
 
-void	delete_stack (t_stack *stack)
+void	delete_stack(t_stack *stack)
 {
 	t_node *temp_node;
 
@@ -44,7 +44,7 @@ void	delete_stack (t_stack *stack)
 
 void	push(t_stack *stack, t_node *new_node)
 {
-	if(stack->size == 0)
+	if (stack->size == 0)
 	{
 		new_node->next = new_node;
 		new_node->prev = new_node;

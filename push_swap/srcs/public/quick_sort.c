@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   quick_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/28 23:33:17 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/30 16:42:03 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/03/31 15:26:23 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	swap(int *arr1, int *arr2)
 	temp = *arr2;
 	*arr2 = *arr1;
 	*arr1 = temp;
-
 	return ;
 }
 
