@@ -6,15 +6,14 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 13:26:25 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/30 16:40:55 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:21:53 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STACK_H
 # define STACK_H
 # define SUCCESS 1
-#include <stdlib.h>
-#include <stdio.h>
+# include <stdlib.h>
 
 typedef struct		s_node
 {
