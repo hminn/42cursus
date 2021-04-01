@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 22:50:46 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/01 16:22:42 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:24:20 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct	s_cnt
 
 void			exec_s(t_stack *stack, const char c);
 void			exec_ss(t_stack *a_stack, t_stack *b_stack);
-void			exec_p(t_stack *dst_stack, t_stack *src_stack, int *cnt, const char c);
+void			exec_p(t_stack *d, t_stack *s, int *cnt, const char c);
 void			exec_r(t_stack *stack, int *count, const char c);
 void			exec_rr(t_stack *a_stack, t_stack *b_stack, int *count);
 void			exec_reverse_r(t_stack *stack, const char c);
