@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   stack2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/25 11:47:11 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/31 15:27:32 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:35:35 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 int		create_stack(t_stack **stack)
 {

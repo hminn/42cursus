@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 15:15:40 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/01 13:10:13 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:34:52 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	init_counter(t_cnt *cnt)
 {

@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   instructions2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 22:40:32 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/31 15:26:04 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:35:40 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	exec_reverse_r(t_stack *stack, const char c)
 {

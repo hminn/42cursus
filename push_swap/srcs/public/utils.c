@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 22:55:31 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/01 11:09:12 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:35:38 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../includes/push_swap.h"
 
 void	ft_puterror_fd(char *s, int fd, t_stack *stack)
 {

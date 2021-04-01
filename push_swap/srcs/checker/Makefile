@@ -14,7 +14,7 @@ LIBS	=	-L../../libft -lft
 
 LIBFT	=	libft.a
 
-HEADER	=	-I ../../includes
+HEADER	=	../../includes
 
 CC		=	gcc
 
@@ -22,8 +22,8 @@ RM		=	rm -rf
 
 all		: $(NAME)
 
-$(NAME)	: $(LIBFT)
-	$(CC) $(SRCS) $(LIBS) $(HEADER) -o $(NAME)
+$(NAME)	: $(OBJS) $(HEADER) $(LIBFT)
+	$(CC) $(SRCS) $(LIBS) -I $(HEADER) -o $(NAME)
 
 $(LIBFT):
 	$(MAKE) -C ../../libft

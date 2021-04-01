@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   stack.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 15:15:12 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/31 15:26:52 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 16:35:28 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
-#include "stack.h"
+#include "../../includes/stack.h"
 
 t_node	*create_node(int new_value)
 {
