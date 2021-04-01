@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/24 15:15:40 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/31 15:28:11 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 13:10:13 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../includes/push_swap.h"
+#include "push_swap.h"
 
 void	init_counter(t_cnt *cnt)
 {
@@ -24,26 +24,17 @@ void	sort_atob(t_stack *a_stack, t_stack *b_stack, int len)
 	int			mid_point;
 	t_cnt		cnt;
 
-	if (len <= 2)
-	{
-		if (len == 2)
-			check_two_of_top(a_stack, 'a');
+	if (sort_check(a_stack))
 		return ;
-	}
+	if (optimize_base_two(a_stack, len))
+		return ;
 	init_counter(&cnt);
 	mid_point = get_midpoint(a_stack, len);
 	while (len-- > 0)
 		if (a_stack->top->value < mid_point)
 			exec_p(b_stack, a_stack, &(cnt.p_count), 'b');
 		else
-		{
-			if (a_stack->bottom->value < mid_point)
-			{
-				exec_rrp(a_stack, b_stack, &(cnt.p_count));
-				continue ;
-			}
 			exec_r(a_stack, &(cnt.r_count), 'a');
-		}
 	while (cnt.idx++ < cnt.r_count)
 		exec_reverse_r(a_stack, 'a');
 	sort_atob(a_stack, b_stack, cnt.r_count);

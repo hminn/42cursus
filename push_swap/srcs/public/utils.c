@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hyeokim <hyeokim@student.42.fr>            +#+  +:+       +#+        */
+/*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/23 22:55:31 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/03/31 15:27:26 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/01 11:09:12 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,21 +34,6 @@ int		sort_check(t_stack *stack)
 		temp = temp_node->value;
 	}
 	return (1);
-}
-
-void	check_two_of_top(t_stack *stack, const char c)
-{
-	if (c == 'a')
-	{
-		if (stack->top->value > stack->top->next->value)
-			exec_s(stack, 'a');
-	}
-	else if (c == 'd')
-	{
-		if (stack->top->value < stack->top->next->value)
-			exec_s(stack, 'b');
-	}
-	return ;
 }
 
 int		get_midpoint(t_stack *stack, int len)

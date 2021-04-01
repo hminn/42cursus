@@ -7,7 +7,8 @@ SRCS =	./main.c \
 		../public/instructions.c \
 		../public/instructions2.c \
 		../public/utils.c \
-		../public/quick_sort.c
+		../public/quick_sort.c \
+		./optimize.c
 
 OBJS	=	$(SRCS:%.c=%.o)
 
