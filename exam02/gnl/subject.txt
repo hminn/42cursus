@@ -1,0 +1,47 @@
+Assignment name  : get_next_line
+Expected files   : get_next_line.c get_next_line.h
+Allowed functions: read, free, malloc
+--------------------------------------------------------------------------------
+
+Write a function will store, in the parameter "line", a line that has been read from the file descriptor 0.
+
+Your function must be prototyped as follows: int get_next_line(char **line);
+
+Your function should be memory leak free.
+
+What we call a "line that has been read" is a succession of 0 to n characters that end with '\n' (ascii code 0x0a) or with End Of File (EOF).
+
+The string stored in the parameter "line" should not contained any '\n'.
+
+The parameter is the address of a pointer to a character that will be used to store the line read.
+
+The return value can be 1, 0 or -1 depending on whether a line has been read, when the reading has been completed (meaning read has returned 0), or if an error has happened respectively.
+
+When you've reached the End Of File, you must store the current buffer in "line". If the buffer is empty you must store an empty string in "line".
+
+When you've reached the End Of File, your function should keep 0 memory allocated with malloc except the last buffer that you should have stored in "line".
+
+What you've stored in "line" should be free-able.
+
+Calling your function get_next_line in a loop will therefore allow you to read the text available on a file descriptor one line at a time until the end of the text, no matter the size of either the text or one of its lines.
+
+Make sure that your function behaves well when it reads from a file, from the standard output, from a redirection etc.
+
+No call to another function will be done on the file descriptor between 2 calls of get_next_line.
+
+Finally we consider that get_next_line has an undefined behavior when reading from a binary file.
+
+You should use the test.sh to help you test your get_next_line.
+
+- file descriptor 0(표준 입력 - stdin)에서 한 줄을 읽어와서 "line"에 저장하는 함수를 만들어라
+- int get_next_line(char **line);
+- 이 함수는 메모리 누수가 없어야 한다.
+- "라인을 읽어왔다"의 의미는 개행('\n')으로 끝나거나 파일의 끝(EOF)으로 끝나는 0에서 n개의 문자들을 읽어 왔다는 이야기이다.
+- line 에 저장될 값에 '\n'은 포함 되지 않는다.
+- line은 읽어온 한 줄을 저장할 곳 포인터의 주소이다.
+- 한줄을 읽어왔으면 리턴 1, 파일의 마지막 줄을 읽었으면 리턴 0, 애러가 발생했으면 리턴 -1.
+- 파일에 끝에 도달했을 때, 현재 버퍼에 있는 값들을 line에 저장하고 만약 버퍼가 비어 있다면 빈 문자열을 line에 저장해야 한다.
+- 파일에 끝에 도달했을 때, 마지막 버퍼를 제외하고는 모든 메모리는 해제되어야 한다.
+- line도 해제 가능한 변수여야 한다.
+- get_next_line은 반복문에서 작동하고 한줄의 길이가 얼마든 간에 fd 안에 있는 텍스트가 끝날때까지 반복문을 돌면서 한줄씩 읽어 온다.
+- 우리가 만든 함수는 표준 출력, 파일에서도 잘 읽어와야 한다.
