@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 15:01:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 18:57:20 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:58:23 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ void				vsleep(unsigned long itime);
 void				clear_sem(void);
 void				init_sem(t_table *table);
 void				init_philo(t_philo *philos);
-void				close_sem(t_table *table)
+void				close_sem(t_table *table);
 int					init_table(t_table *table, t_philo *philos);
 #endif
