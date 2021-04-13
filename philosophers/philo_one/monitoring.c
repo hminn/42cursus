@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 00:19:37 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 13:59:57 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 14:04:30 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		someone_dead(t_philo *philo, unsigned long current_time)
 	unsigned long	time_to_die;
 
 	pthread_mutex_lock(&philo->table->m_dead);
-	time_to_die = (unsigned long) philo->table->time_to_die;
+	time_to_die = (unsigned long)philo->table->time_to_die;
 	if (philo->table->is_dead > 0 ||
 		current_time - philo->last_meal > time_to_die)
 	{

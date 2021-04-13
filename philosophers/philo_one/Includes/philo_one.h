@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:11:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 11:01:40 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 14:05:40 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,21 +51,20 @@ typedef struct		s_philo
 	t_table			*table;
 }					t_philo;
 
-int				ft_result(const char *str);
-int				ft_atoi(const char *str);
-int				put_error(char *str);
-int				parsing(t_table *table, int argc, char *argv[]);
-int				msg(t_philo *philo, int msg, unsigned long current_time);
-int				someone_dead(t_philo *philo, unsigned long current_time);
-int				fully_eat(t_philo *philo);
-unsigned long	get_time(void);
-void			*philo_act(void *p);
-void			*philo_monitor(void *p);
-int				eat(t_philo *philo);
-void			vsleep(unsigned long itime);
-void			clean_table(t_table *table, t_philo *philos);
-void			init_philo(t_philo *philos);
-int				init_table(t_table *table, t_philo *philos);
-void			assign_fork(t_philo *philo, int idx);
-
+int					ft_result(const char *str);
+int					ft_atoi(const char *str);
+int					put_error(char *str);
+int					parsing(t_table *table, int argc, char *argv[]);
+int					msg(t_philo *philo, int msg, unsigned long current_time);
+int					someone_dead(t_philo *philo, unsigned long current_time);
+int					fully_eat(t_philo *philo);
+unsigned long		get_time(void);
+void				*philo_act(void *p);
+void				*philo_monitor(void *p);
+int					eat(t_philo *philo);
+void				vsleep(unsigned long itime);
+void				clean_table(t_table *table, t_philo *philos);
+void				init_philo(t_philo *philos);
+int					init_table(t_table *table, t_philo *philos);
+void				assign_fork(t_philo *philo, int idx);
 # endif
