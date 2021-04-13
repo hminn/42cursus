@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:50:54 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 13:53:15 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 13:55:41 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ int		msg(t_philo *philo, int msg, unsigned long current_time)
 	if ((msg != DEAD && someone_dead(philo, current_time)) ||
 		fully_eat(philo))
 	{
-		fully_eat(philo) ? printf("All philosophers have eaten enough\n") : 0;
+		if (fully_eat(philo))
+			printf("All philosophers have eaten enough\n");
 		pthread_mutex_unlock(&table->write_msg);
 		return (1);
 	}
