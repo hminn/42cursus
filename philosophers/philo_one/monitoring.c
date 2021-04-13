@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 00:19:37 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 13:57:24 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 13:59:57 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ int		fully_eat(t_philo *philo)
 	pthread_mutex_lock(&philo->table->m_eat);
 	if (philo->table->total_eat == philo->table->nbr_philos)
 	{
-		printf("All philosophers have eaten enough\n");
 		pthread_mutex_unlock(&philo->table->m_eat);
 		return (1);
 	}
