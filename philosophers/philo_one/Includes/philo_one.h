@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:11:02 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 14:05:40 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 14:06:36 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,4 +67,4 @@ void				clean_table(t_table *table, t_philo *philos);
 void				init_philo(t_philo *philos);
 int					init_table(t_table *table, t_philo *philos);
 void				assign_fork(t_philo *philo, int idx);
-# endif
+#endif
