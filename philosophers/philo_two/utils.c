@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:19:05 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 18:51:45 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/13 18:57:04 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,4 +64,13 @@ void			vsleep(unsigned long itime)
 			return ;
 		usleep(100);
 	}
+}
+
+void			close_sem(t_table *table)
+{
+	sem_close(table->enter);
+	sem_close(table->fork);
+	sem_close(table->write_msg);
+	sem_close(table->m_eat);
+	sem_close(table->m_dead);
 }
