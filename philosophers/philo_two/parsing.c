@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:44:18 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 14:04:39 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:44:10 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo_two.h"
 
 int		parsing(t_table *table, int argc, char *argv[])
 {

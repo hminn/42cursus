@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:06:57 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 16:31:58 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:44:18 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo_two.h"
 
 int		main(int argc, char *argv[])
 {

@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 21:53:42 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 18:49:54 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:43:53 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo_two.h"
 
 void	*philo_act(void *p)
 {

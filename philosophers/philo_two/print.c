@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:50:54 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 18:51:20 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:43:59 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo_two.h"
 
 int		msg(t_philo *philo, int msg, unsigned long current_time)
 {

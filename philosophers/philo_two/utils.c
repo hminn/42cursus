@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/12 15:19:05 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 18:57:04 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:44:06 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo_two.h"
 
 int				ft_result(const char *str)
 {

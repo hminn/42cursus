@@ -6,11 +6,11 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 00:19:37 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/13 18:53:14 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 10:44:14 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "philo_one.h"
+#include "philo_two.h"
 
 int		someone_dead(t_philo *philo, unsigned long current_time)
 {
