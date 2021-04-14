@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 00:19:37 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/14 15:43:15 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:45:38 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,6 @@ int			kill_process(t_philo *philos)
 		kill(philos[i].pid, SIGKILL);
 		i++;
 	}
-	// sem_post(philos->table->write_msg);
-	// sem_wait(philos->table->write_msg);
-	// printf("All process killed\n");
-	// sem_post(philos->table->write_msg);
 	return (1);
 }
 

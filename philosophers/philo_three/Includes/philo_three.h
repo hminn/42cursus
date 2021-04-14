@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 10:47:49 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/14 15:37:18 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:46:02 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,21 +54,21 @@ typedef struct		s_philo
 	t_table			*table;
 }					t_philo;
 
-int				parsing(t_table *table, int argc, char *argv[]);
-int				put_error(char *str);
-int				msg(t_philo *philo, int msg, unsigned long current_time);
-int				ft_result(const char *str);
-int				ft_atoi(const char *str);
-unsigned long	get_time(void);
-void			vsleep(unsigned long itime);
-void			close_sem(t_table *table);
-void			*philo_act(void *p);
-void			*philo_monitor(void *p);
-int				eat(t_philo *philo);
-void			init_philo(t_philo *philos);
-void			clear_sem(void);
-void			init_sem(t_table *table);
-int				init_table(t_table *table, t_philo *philos);
-int				kill_process(t_philo *philos);
-void			process_monitor(t_philo *philos);
+int					parsing(t_table *table, int argc, char *argv[]);
+int					put_error(char *str);
+int					msg(t_philo *philo, int msg, unsigned long current_time);
+int					ft_result(const char *str);
+int					ft_atoi(const char *str);
+unsigned long		get_time(void);
+void				vsleep(unsigned long itime);
+void				close_sem(t_table *table);
+void				*philo_act(void *p);
+void				*philo_monitor(void *p);
+int					eat(t_philo *philo);
+void				init_philo(t_philo *philos);
+void				clear_sem(void);
+void				init_sem(t_table *table);
+int					init_table(t_table *table, t_philo *philos);
+int					kill_process(t_philo *philos);
+void				process_monitor(t_philo *philos);
 #endif
