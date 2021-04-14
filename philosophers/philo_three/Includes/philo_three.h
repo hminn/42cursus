@@ -6,12 +6,12 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/14 10:47:49 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/14 15:46:02 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:55:06 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHILO_TWO_H
-# define PHILO_TWO_H
+#ifndef PHILO_THREE_H
+# define PHILO_THREE_H
 # define TAKEN_FORK	0
 # define EATING		1
 # define SLEEPING	2
