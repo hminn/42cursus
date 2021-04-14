@@ -6,7 +6,7 @@
 /*   By: hyeokim <hyeokim@student.42seoul.kr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/13 00:19:37 by hyeokim           #+#    #+#             */
-/*   Updated: 2021/04/14 15:33:48 by hyeokim          ###   ########.fr       */
+/*   Updated: 2021/04/14 15:38:38 by hyeokim          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void		process_monitor(t_philo *philos)
 	while (1)
 	{
 		i = -1;
-		while (++i < philo->table->nbr_philos)
+		while (++i < philos->table->nbr_philos)
 		{
 			status = -1;
 			waitpid(philos[i].pid, &status, WNOHANG);
